@@ -3,7 +3,7 @@ for(let i=0;i<256;i++)
 {
     let div = document.createElement('div');
     //div.textContent = "div";
-    div.style.backgroundColor = 'bisque';
+    div.style.backgroundColor = 'aliceblue';
     div.classList.add("col");
     container.appendChild(div);
 }
@@ -30,7 +30,7 @@ eraser.addEventListener('click',function(e)
    {
     era.addEventListener('mouseover',function (e)
     {
-        e.target.style.backgroundColor = 'bisque';
+        e.target.style.backgroundColor = 'aliceblue';
     }); 
 
    });
@@ -42,7 +42,7 @@ clear.addEventListener('click',function(e)
     let cle = document.querySelectorAll('.col');
     cle.forEach(function(cl)
    {
-      cl.style.backgroundColor = 'bisque';
+      cl.style.backgroundColor = 'aliceblue';
    });
 });
 
@@ -76,7 +76,7 @@ pixels.addEventListener('click',function(e)
     for(let i=0;i<(pxsize*pxsize);i++)
      { 
        let div = document.createElement('div');
-       div.style.backgroundColor = 'bisque';
+       div.style.backgroundColor = 'aliceblue';
        div.classList.add("col");
        griD.appendChild(div);
      }
@@ -85,5 +85,23 @@ pixels.addEventListener('click',function(e)
 });
 
 let rainbow = document.querySelector('#rainbow');
+rainbow.addEventListener('click',function(e)
+{
+   
+    let draw = document.querySelectorAll('.col');
+    draw.forEach(function(dra)
+   {
+     const colours = [];
+     for(let i=0;i<3;i++)
+     {
+        colours[i] = Math.random()*256;
+     }
+    dra.addEventListener('mouseover',function (e)
+    {
+        e.target.style.backgroundColor = 'rgb('+colours[0]+','+colours[1]+','+colours[2]+')';
+    }); 
+
+   }); 
+});
 
 
