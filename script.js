@@ -46,16 +46,24 @@ clear.addEventListener('click',function(e)
    });
 });
 
-
-
-/*let draw = document.querySelectorAll('.col');
-draw.forEach(function(dra)
+let pixels = document.querySelector('#pixels');
+pixels.addEventListener('click',function(e)
 {
-    dra.addEventListener('mouseover',function (e)
-    {
-        e.target.style.backgroundColor = 'black';
-    }); 
+   
+   let pxsize = parseInt(prompt("enter number of pixels per side:"));
+   if(pxsize>100)
+   {
+    alert("Number of pixels per side should not exceed 100!!!Please try again");
 
-});*/
-
+   }
+   else if(pxsize%2!=0)
+   {
+    alert("each side should have even number of pixels!!Please try again");
+   }
+   else
+   {
+     let divs = document.querySelector('.col')
+     
+   }
+});
 
