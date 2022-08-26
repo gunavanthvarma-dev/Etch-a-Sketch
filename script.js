@@ -62,8 +62,28 @@ pixels.addEventListener('click',function(e)
    }
    else
    {
-     let divs = document.querySelector('.col')
+     let griD = document.querySelector('.container');
+     while(griD.firstChild)
+     {
+        griD.removeChild(griD.firstChild);
+     }
+     //let container = document.querySelector(".container");
+     let boxes = 500/pxsize;
+     document.getElementById("cont").style.setProperty('grid-template-columns','repeat('+pxsize+','+boxes+'px)');
+     document.getElementById("cont").style.setProperty('grid-template-rows','repeat('+pxsize+','+boxes+'px)');
+
+
+    for(let i=0;i<(pxsize*pxsize);i++)
+     { 
+       let div = document.createElement('div');
+       div.style.backgroundColor = 'bisque';
+       div.classList.add("col");
+       griD.appendChild(div);
+     }
      
    }
 });
+
+let rainbow = document.querySelector('#rainbow');
+
 
