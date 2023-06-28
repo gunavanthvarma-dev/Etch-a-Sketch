@@ -1,5 +1,7 @@
 # Etch-a-Sketch
 
+Site:- https://gunavanthvarma-dev.github.io/Etch-a-Sketch/
+
 This project is part of the Odin curriculum.This project was helpful in practicing what I have learnt till now in Odin-foundations. There might be further iterations of this project in the future.
 
 /Help/
